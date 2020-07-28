@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="player_name_text_size">32sp</dimen>
+    <dimen name="player_name_text_size_landscape">22sp</dimen>
+    <dimen name="player_property_text_size">18sp</dimen>
+    <dimen name="player_name_top_margin">10dp</dimen>
+    <dimen name="standard_padding">20dp</dimen>
+    <dimen name="row_top_margin_standard">20dp</dimen>
+    <dimen name="leading_row_top_margin">30dp</dimen>
+    <dimen name="landscape_standard_margin">10dp</dimen>
+
+</resources>

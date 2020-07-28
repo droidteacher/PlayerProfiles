@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PlayerProfiles</string>
+    <string name="current_club">Current club</string>
+    <string name="age">Age</string>
+    <string name="height">Height</string>
+    <string name="citizenship">Citizenship</string>
+    <string name="position">Position</string>
+    <string name="market_value">Market value</string>
+</resources>

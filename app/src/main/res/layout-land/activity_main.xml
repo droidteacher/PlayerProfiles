@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kevin_de_bruyne"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/landscape_standard_margin"/>
+
+        <TextView
+            android:id="@+id/playerName"
+            style="@style/PlayerNameStyle"
+            android:textSize="@dimen/player_name_text_size_landscape"
+            tools:text="Kevin DeBruyne"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="@dimen/landscape_standard_margin"
+            android:layout_marginBottom="@dimen/landscape_standard_margin"/>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- AGE -->
+            <LinearLayout
+                android:id="@+id/row1"
+                style="@style/PropertyRowStyle"
+                android:layout_marginTop="@dimen/leading_row_top_margin">
+
+                <TextView
+                    android:id="@+id/ageLabel"
+                    style="@style/LabelStyle"
+                    android:text="@string/age" />
+
+                <TextView
+                    android:id="@+id/playerAge"
+                    style="@style/PropertyValueStyle"
+                    tools:text="29" />
+            </LinearLayout>
+
+            <!-- HEIGHT -->
+            <LinearLayout
+                android:id="@+id/row2"
+                style="@style/PropertyRowStyle">
+
+
+                <TextView
+                    android:id="@+id/heightLabel"
+                    style="@style/LabelStyle"
+                    android:text="@string/height" />
+
+                <TextView
+                    android:id="@+id/heightValue"
+                    style="@style/PropertyValueStyle"
+                    tools:text="181 cm" />
+            </LinearLayout>
+
+            <!-- CITIZENSHIP -->
+            <LinearLayout
+                android:id="@+id/row3"
+                style="@style/PropertyRowStyle">
+
+                <!-- Emoji flag: 🇧🇪 -->
+
+                <TextView
+                    android:id="@+id/citizenshipLabel"
+                    style="@style/LabelStyle"
+                    android:text="@string/citizenship" />
+
+                <TextView
+                    android:id="@+id/citizenshipValue"
+                    style="@style/PropertyValueStyle"
+                    tools:text="🇧🇪" />
+            </LinearLayout>
+
+
+            <!-- POSITION -->
+            <LinearLayout
+                android:id="@+id/row4"
+                style="@style/PropertyRowStyle">
+
+                <TextView
+                    android:id="@+id/positionLabel"
+                    style="@style/LabelStyle"
+                    android:text="@string/position" />
+
+                <TextView
+                    android:id="@+id/positionValue"
+                    style="@style/PropertyValueStyle"
+                    tools:text="Attacking midfield" />
+            </LinearLayout>
+
+
+            <!-- CURRENT CLUB -->
+            <LinearLayout
+                android:id="@+id/row5"
+                style="@style/PropertyRowStyle">
+
+                <TextView
+                    android:id="@+id/clubLabel"
+                    style="@style/LabelStyle"
+                    android:text="@string/current_club" />
+
+                <TextView
+                    android:id="@+id/clubValue"
+                    style="@style/PropertyValueStyle"
+                    tools:text="Manchester City" />
+            </LinearLayout>
+
+
+            <!-- MARKET VALUE -->
+            <LinearLayout
+                android:id="@+id/row6"
+                style="@style/PropertyRowStyle">
+
+                <TextView
+                    android:id="@+id/marketValueLabel"
+                    style="@style/LabelStyle"
+                    android:text="@string/market_value" />
+
+                <TextView
+                    android:id="@+id/marketValueValue"
+                    style="@style/PropertyValueStyle"
+                    tools:text="120.00m EUR" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
