@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import hu.prooktatas.playerprofiles.model.Player
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var positionTextView: TextView
     private lateinit var clubTextView: TextView
     private lateinit var marketValueTextView: TextView
+
+    private var selectedPlayer: Player? = null
 
 
 
@@ -35,14 +38,19 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        playerImage.setImageDrawable(resources.getDrawable(R.drawable.kevin_de_bruyne))
-        nameTextView.text = "Kevin DeBruyne"
-        ageTextView.text = 29.toString()
-        heightTextView.text = "181 cm"
-        citizenshipTextView.text = "\uD83C\uDDE7\uD83C\uDDEA"
-        positionTextView.text = "Attacking midfield"
-        clubTextView.text = "Manchester City"
-        marketValueTextView.text = "120.00m EUR"
+        selectedPlayer = intent.extras?.get("selectedPlayer") as? Player
+
+        if (selectedPlayer != null) {
+            playerImage.setImageDrawable(resources.getDrawable(selectedPlayer!!.imgRes))
+            nameTextView.text = selectedPlayer!!.name
+            ageTextView.text = selectedPlayer!!.age.toString()
+            heightTextView.text = "${selectedPlayer!!.height} cm"
+            citizenshipTextView.text = selectedPlayer!!.countryFlag
+            positionTextView.text = selectedPlayer!!.position
+            clubTextView.text = selectedPlayer!!.club
+            marketValueTextView.text = "${selectedPlayer!!.marketValue}m EUR"
+        }
+
 
     }
 }

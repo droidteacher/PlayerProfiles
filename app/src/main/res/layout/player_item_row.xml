@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:id="@+id/playerItemImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:srcCompat="@drawable/kevin_de_bruyne" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/playerItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kevin DeBruyne"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/playerItemClub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manchester City"
+            android:textSize="11sp"/>
+    </LinearLayout>
+</LinearLayout>
